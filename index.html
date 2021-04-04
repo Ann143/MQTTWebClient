@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publish/Subscribe Web Clients</title>
+
+  <!-- Added the Bootstrap CDN -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <br><br><br><br>
+  <h1 align="center" style="color: white;">Publish/Subscribe Web Client</h1>
+  <div class="container" style="background-color: white;">
+    <div class="row">
+      <div class="col-sm">
+        <div class="rowleft">
+          <center>
+            <h3 style="margin-right:20px;">Publish</h3>
+            <b>Topic:</b><input id="pubTopic" type="text"><br><br>
+           <b>Payload:</b> <input id="pubPayload" type="text"><br><br>
+            <button id="pubButton" class="btn btn-primary" value="">Publish</button>
+          </center>
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="rowcenter">
+          <center>
+            <h3>Subscribe</h3>
+           <b>Topic:</b><input id="subTopic" type="text"><br><br>
+            <button id="subButton" class="btn btn-primary" value="">Subscribe</button>
+          </center>
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="col-sm-4" style="float:right; margin-top:-250px">
+          <h3 align="center">Messages</h3>
+          <div class="card">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Topic</th>
+                    <th scope="col">Payload</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="./browserMqtt.js"></script>
+<script src="./index.js"></script>
+
+</html>
